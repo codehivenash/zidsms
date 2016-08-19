@@ -1,0 +1,31 @@
+<h1>Seeder, or Data Center</h1>
+<div class="row">
+	<div class="col-md-4">
+	{{number-box title='Groups' number=groups.length}}
+	</div>
+	<div class="col-md-4">
+		{{number-box title='Students' number=students.length}}
+	</div>
+	{{!-- <div class="col-md-4">
+		{{number-box title='Books' number=books.length}}
+	</div> --}}
+</div>
+
+{{!-- Seeder for Libraries --}}
+{{seeder-block
+	sectionTitle='Groups'
+	counter=groupsCounter
+	generateAction='generateGroups' 
+	deleteAction='deleteGroups'
+	createReady=groupsDone
+	deleteReady=groupsDelDone
+}}
+
+{{seeder-block
+	sectionTitle='Students'
+	counter=studentsCounter
+	generateAction='generateStudents' 
+	deleteAction='deleteStudents'
+	createReady=studentsDone
+	deleteReady=studentsDelDone
+}}

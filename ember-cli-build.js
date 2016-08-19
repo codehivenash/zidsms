@@ -10,8 +10,10 @@ module.exports = function(defaults) {
   // app.import('vendor/css/datatables.css');
   // app.import('vendor/css/datatables.bootstrap.css');
    app.import('vendor/css/profile.css');
-   // app.import('vendor/img/assets/layouts/layout/img/logo.png');
+   app.import('vendor/css/error.css');
 
+
+   // app.import('vendor/img/assets/layouts/layout/img/logo.png');
 
   // BEGIN CORE PLUGINS
   app.import('vendor/js/global/plugins/jquery.min.js');

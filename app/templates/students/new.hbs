@@ -1,0 +1,172 @@
+
+{{!-- <!-- BEGIN SAMPLE TABLE PORTLET-->
+
+<div class="portlet light ">
+    <div class="portlet-title">
+        <div class="caption font-light">
+            
+        </div>  
+    </div>
+    <div class="portlet-body">
+        <div class="note note-info">
+            <p> A black page template with a minimal dependency assets to use as a base for any custom page you create </p>
+        </div>
+    </div>
+</div>
+<!-- END SAMPLE TABLE PORTLET--> --}}
+<div class="portlet light bordered">
+    <div class="portlet-title">
+        <div class="caption font-light">
+            <i class="icon-plus font-blue-hoki"></i>
+            <span class="caption-subject font-blue-hoki bold uppercase">Add Student</span>
+        </div>
+        {{!-- <div class="caption font-light">
+            <i class="icon-list font-light"></i>
+            <span class="caption-subject bold uppercase">Student List</span>
+        </div> --}}
+{{!--         <div class="actions">
+            {{#link-to 'students.index' class="btn green btn-sm"}}<i class="fa fa-caret-left"></i>  Back
+            {{/link-to}}
+            </div> --}}
+    </div>
+    <div class="portlet-body form">
+        <!-- BEGIN FORM-->
+        
+            <div class="form-body">
+                <h3 class="form-section">Person Info</h3>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">First Name</label>
+                            {{input type="text" value=model.firstName class="form-control" id="firstName" placeholder="First Name"}}
+                            {{!-- <span class="help-block"> This is inline help </span> --}}
+                        </div>
+                    </div>
+                    <!--/span-->
+                    <div class="col-md-6">
+                        <div class="form-group ">
+                            <label class="control-label">Last Name</label>
+                            {{input type="text" value=model.lastName class="form-control" id="lastName" placeholder="Last Name"}}
+                            </div>
+                            {{!-- <span class="help-block"> This field has error. </span> --}}
+                        </div>
+                    </div>
+                    <!--/span-->
+                </div>
+                <!--/row-->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Gender</label>
+                            <select class="form-control">
+                                <option value="">Male</option>
+                                <option value="">Female</option>
+                            </select>
+                            <span class="help-block"> Select your gender </span>
+                        </div>
+                    </div>
+                    <!--/span-->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label class="control-label">Date of Birth</label>
+                            {{input type="date" value=model.dateOfBirth class="form-control" id="DOB" placeholder="dd/mm/yyyy"}}
+                        </div>
+                    </div>
+                    <!--/span-->
+                    <!--/span-->
+                    
+                </div>
+                <!--/row-->
+
+                <!--/row-->
+                <h3 class="form-section">Address</h3>
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="form-group">
+                            <label>Street</label>
+                           {{input type="text" value=model.street class="form-control" id="street" placeholder="Street"}}</div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>City</label>
+                            {{input type="text" value=model.city class="form-control" id="city" placeholder="City"}}</div>
+                    </div>
+                    <!--/span-->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>State</label>
+                            {{input type="text" value=model.state class="form-control" id="state" placeholder="State"}}
+                            </div>
+                    </div>
+                    <!--/span-->
+                </div>
+                <!--/row-->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Post Code</label>
+                            {{input type="text" value=model.postcode class="form-control" id="postcode" placeholder="Postcode"}}
+                            </div>
+                    </div>
+                    <!--/span-->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Country</label>
+                            <select class="form-control"> </select>
+                        </div>
+                    </div>
+                    <!--/span-->
+                </div>
+                 <!--/row-->
+                <h3 class="form-section">Contact</h3>
+                <div class="row">
+                    <div class="col-md-12 ">
+                        <div class="form-group">
+                            <label>Email</label>
+                            {{input type="text" value=model.email class="form-control" id="email" placeholder="Email"}}
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Mobile Number</label>
+                            {{input type="text" value=model.mobileNumber class="form-control" id="mobileNumber" placeholder="MobileNumber"}}
+                            </div>
+                    </div>
+                    <!--/span-->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Landline Number</label>
+                            {{input type="text" value=model.landlineNumber class="form-control" id="landlineNumber" placeholder="LandlineNumber "}}
+                        </div>
+                    </div>
+                    <!--/span-->
+                </div>
+                <!--/row-->
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Post Code</label>
+                            <input type="text" class="form-control"> </div>
+                    </div>
+                    <!--/span-->
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label>Country</label>
+                            <select class="form-control"> </select>
+                        </div>
+                    </div>
+                    <!--/span-->
+                </div>
+            <div class="form-actions right">
+                <button type="button" class="btn default" {{action 'cancelAddStudent' model}}>Cancel</button>
+                <button type="submit" class="btn blue" {{action 'addStudent' model}}>
+                    <i class="fa fa-check"></i> Save</button>
+            </div>
+       
+        <!-- END FORM-->
+    </div>
+</div>

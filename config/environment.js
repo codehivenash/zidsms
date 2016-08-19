@@ -13,6 +13,9 @@ module.exports = function(environment) {
     databaseURL: "https://zidsms-93ec3.firebaseio.com",
     storageBucket: "zidsms-93ec3.appspot.com",
     },
+     moment: {
+      outputFormat: 'L'
+    },
   // if using ember-cli-content-security-policy
     contentSecurityPolicy: {
       'script-src': "'self' 'unsafe-eval' apis.google.com",

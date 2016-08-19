@@ -1,0 +1,58 @@
+<div class="portlet light ">
+   <div class="portlet-title">
+      {{#link-to 'groups.new' }}<button type="button" class="btn btn-sm blue">
+      <i class="fa fa-user-plus"></i>Add</button>{{/link-to}}
+      {{#link-to 'messages.messageall' }}<button type="button" class="btn btn-sm blue">
+      <i class="fa fa-cogs"></i> Message All</button>{{/link-to}}
+      {{!-- {{#link-to 'exams.new' }}<button type="button" class="btn btn-sm blue">
+      <i class="fa fa-bullhorn"></i> New Exam</button>{{/link-to}}
+       {{#link-to 'exams.new' }}<button type="button" class="btn btn-sm blue">
+     <i class="fa fa-bullhorn"></i> New Assignment</button>{{/link-to}} --}}
+      <div class="actions">
+         <div class="portlet-input input-inline">
+            <div class="input-icon right">
+               <i class="icon-magnifier"></i>
+               <input type="text" class="form-control input-circle" placeholder="search...">
+            </div>
+         </div>
+      </div>
+   </div>
+   <div class="portlet-body">
+      <div class="table-scrollable table-scrollable-borderless">
+         <table class="table table-light table-hover ">
+            <thead>
+               <tr>
+                  <th> ID </th>
+                  <th> Title </th>
+                  <th> Type </th>
+                  {{!--                   <th> Venue </th> --}}
+                  <th> Company Name</th>
+                  <th> StartDate </th>
+                  <th> End Date</th>
+                  <th> Status</th>
+                  <th> Student Count</th>
+                  {{!-- <th> Actions</th> --}}
+               </tr>
+            </thead>
+            <tbody>
+               {{#each groups as |group|}}
+               <tr>
+                  <td> {{group.id}} </td>
+                  <td> {{#link-to 'groups.show' group}}{{group.groupTitle}}{{/link-to}}</td>
+                  <td> {{group.groupType}}</td>
+                  {{!-- <td> {{group.groupVenue}} </td> --}}
+                  <td> {{group.groupCompanyName}} </td>
+                  <td> {{moment-format group.groupStartDate}} </td>
+                  <td> {{moment-format group.groupEndDate}} </td>
+                  <td> {{group.groupStatus}} </td>
+                  <td> {{group.students.length}} </td>
+                  {{!-- <td> 12 </td> --}}
+               </tr>
+               
+               {{/each}}
+            </tbody>
+         </table>
+      </div>
+      
+   </div>
+</div>

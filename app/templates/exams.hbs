@@ -1,0 +1,112 @@
+<!-- BEGIN CONTENT BODY -->
+<div class="page-content">
+   <!-- BEGIN PAGE BAR -->
+   {{!-- <div class="page-bar">
+      <ul class="page-breadcrumb">
+         <li>
+            <a href="index.html">Home</a>
+            <i class="fa fa-circle"></i>
+         </li>
+         <li>
+            <span>Students</span>
+         </li>
+      </ul>
+                              
+      <div class="page-toolbar">
+         <div class="btn-group pull-right">
+            <button type="button" class="btn green btn-sm btn-outline dropdown-toggle" data-toggle="dropdown"> Actions
+            <i class="fa fa-angle-down"></i>
+            </button>
+            <ul class="dropdown-menu pull-right" role="menu">
+               <li>
+                  <a href="#">
+                  <i class="icon-bell"></i> Action</a>
+               </li>
+               <li>
+                  <a href="#">
+                  <i class="icon-shield"></i> Another action</a>
+               </li>
+               <li>
+                  <a href="#">
+                  <i class="icon-user"></i> Something else here</a>
+               </li>
+               <li class="divider"> </li>
+               <li>
+                  <a href="#">
+                  <i class="icon-bag"></i> Separated link</a>
+               </li>
+            </ul>
+         </div>
+      </div>
+     
+   </div> --}}
+   <!-- END PAGE BAR -->
+   <h3 class="page-title"> <i class="icon-users font-light"></i> Exam Management
+      {{!-- <small>Manage Students</small> --}}
+   </h3>
+   <!-- END PAGE TITLE-->
+   <div class="tabbable tabbable-tabdrop">
+                                        <ul class="nav nav-pills"><li class="dropdown pull-right tabdrop"><a class="dropdown-toggle" data-toggle="dropdown" href="#"><i class="fa fa-ellipsis-v"></i>&nbsp;<i class="fa fa-angle-down"></i> <b class="caret"></b></a><ul class="dropdown-menu"><li>
+                                                <a href="#tab15" data-toggle="tab">Section 5</a>
+                                            </li><li>
+                                                <a href="#tab16" data-toggle="tab">Section 6</a>
+                                            </li><li>
+                                                <a href="#tab17" data-toggle="tab">Section 7</a>
+                                            </li><li>
+                                                <a href="#tab18" data-toggle="tab">Section 8</a>
+                                            </li></ul></li>
+                                            <li class="active">
+                                                <a href="#tab11" data-toggle="tab" aria-expanded="true">Section 1</a>
+                                            </li>
+                                            <li class="">
+                                                <a href="#tab12" data-toggle="tab" aria-expanded="false">Section 2</a>
+                                            </li>
+                                            <li class="">
+                                                <a href="#tab13" data-toggle="tab" aria-expanded="false">Section 3</a>
+                                            </li>
+                                            <li class="">
+                                                <a href="#tab14" data-toggle="tab" aria-expanded="false">Section 4</a>
+                                            </li>
+                                            
+                                            
+                                            
+                                            
+                                        </ul>
+                                        <div class="tab-content">
+                                            <div class="tab-pane active" id="tab11">
+                                                <p> I'm in Section 1. </p>
+                                            </div>
+                                            <div class="tab-pane" id="tab12">
+                                                <p> Howdy, I'm in Section 2. </p>
+                                            </div>
+                                            <div class="tab-pane" id="tab13">
+                                                <p> Howdy, I'm in Section 3. </p>
+                                            </div>
+                                            <div class="tab-pane" id="tab14">
+                                                <p> Howdy, I'm in Section 4. </p>
+                                            </div>
+                                            <div class="tab-pane" id="tab15">
+                                                <p> Howdy, I'm in Section 5. </p>
+                                            </div>
+                                            <div class="tab-pane" id="tab16">
+                                                <p> Howdy, I'm in Section 6. </p>
+                                            </div>
+                                            <div class="tab-pane" id="tab17">
+                                                <p> Howdy, I'm in Section 7. </p>
+                                            </div>
+                                            <div class="tab-pane" id="tab18">
+                                                <p> Howdy, I'm in Section 8. </p>
+                                            </div>
+                                            <div class="tab-pane" id="tab19">
+                                                <p> Howdy, I'm in Section 9. </p>
+                                            </div>
+                                        </div>
+                                    </div>
+   <!-- END PAGE HEADER-->
+   <div class="row">
+        <div class="col-md-12">
+             {{outlet}}               
+        </div>
+   </div>
+</div>
+<!-- END CONTENT BODY -->

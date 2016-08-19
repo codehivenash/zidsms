@@ -1,0 +1,23 @@
+{{stat-group title="Groups" count=all.length}}
+
+{{category-group}}
+
+<div class="tab-content">
+   <div class="tab-pane fade active in" id="tab_2_1">
+      {{groups-listing groups=all}}
+   </div>
+   <div class="tab-pane fade" id="tab_2_2">
+      {{!-- START Student Table --}}
+      {{groups-listing groups=certificate}}
+      {{!-- START Student Table --}}
+   </div>
+   <div class="tab-pane fade" id="tab_2_3">
+      {{groups-listing groups=diploma}}
+   </div>
+   <div class="tab-pane fade" id="tab_2_4">
+      {{groups-listing groups=corporate}}
+   </div>
+   <div class="tab-pane fade" id="tab_2_5">
+      {{groups-listing groups=other}}
+   </div>
+</div>
