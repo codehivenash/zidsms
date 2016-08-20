@@ -35,7 +35,7 @@ export default Ember.Route.extend({
 			this.transitionTo('students');
 		},
 		willtransition(){
-			this.controller.get('model').rollbackAttributes();
+			model.rollbackAttributes();
 		}
 		
 	}

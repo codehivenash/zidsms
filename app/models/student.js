@@ -50,23 +50,32 @@ export default Model.extend({
   //We will add messages, payments, fees, profile later on. 
 
   randomize(group){
+    //Personal
     this.set('firstName', Faker.name.firstName());
     this.set('lastName', Faker.name.lastName());
+
     this.set('dateOfBirth', Faker.date.past());
-    this.set('email', Faker.internet.email());
     this.set('gender', Faker.random.arrayElement(genderTypes));
-    this.set('group', group);
-    this.set('studentType', group.get('groupType'));
+
+    //Contact
+    this.set('email', Faker.internet.email());
+    this.set('mobileNumber', Faker.phone.phoneNumber());
+    this.set('landlineNumber', Faker.phone.phoneNumber());
+    
+   
+    //Address
     this.set('street', Faker.address.streetAddress());
     this.set('city', Faker.address.city());
     this.set('state', Faker.address.state());
     this.set('postCode', Faker.address.zipCode());
     this.set('country', Faker.address.country());
-    this.set('mobileNumber', Faker.phone.phoneNumber());
-    this.set('landlineNumber', Faker.phone.phoneNumber());
+    
 
     this.set('username', 'demo');
     this.set('password', 'demo');
+
+    this.set('studentType', group.get('groupType'));
+    this.set('group', group);
     
     return this;
   },

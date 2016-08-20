@@ -1,6 +1,6 @@
 <div class="portlet light ">
    <div class="portlet-title">
-      {{#link-to 'groups.new' }}<button type="button" class="btn btn-sm blue">
+      {{#link-to 'groups.new'}}<button type="button" class="btn btn-sm blue">
       <i class="fa fa-user-plus"></i>Add</button>{{/link-to}}
       {{#link-to 'messages.messageall' }}<button type="button" class="btn btn-sm blue">
       <i class="fa fa-cogs"></i> Message All</button>{{/link-to}}
@@ -43,7 +43,13 @@
                   {{!-- <td> {{group.groupVenue}} </td> --}}
                   <td> {{group.groupCompanyName}} </td>
                   <td> {{moment-format group.groupStartDate}} </td>
-                  <td> {{moment-format group.groupEndDate}} </td>
+                  <td> 
+                  {{#if group.groupCloseDate }}
+                     {{moment-format group.groupEndDate}} 
+                  {{else}}
+                     In Progress
+                  {{/if}}
+                  </td>
                   <td> {{group.groupStatus}} </td>
                   <td> {{group.students.length}} </td>
                   {{!-- <td> 12 </td> --}}
