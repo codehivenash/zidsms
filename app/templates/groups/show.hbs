@@ -3,9 +3,16 @@
       {{stat-block color="blue" title="Students" count=model.students.length}}
    </div>
    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
-      {{stat-block color="red" title="Dollars Owing" count=500}}     
+      {{stat-block color="red" title="What?" count=2048}}
    </div>
-{{!--    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+   <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+      {{stat-block color="orange" title="That" count=130}}
+   </div>
+   <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
+      {{stat-block color="yellow" title="THing 4" count=99}}
+   </div>
+   {{!--
+   <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
       {{stat-block color="blue" title=title count=count}}
    </div>
    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
@@ -13,8 +20,8 @@
    </div>
    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12">
       {{stat-block color="green"}}
-   </div> --}}
+   </div>
+   --}}
 </div>
-
-{{group-departments}}
-{{group-page-students-listing students=model.students group=model}}
+{{group-sections model=model}}
+{{group/overview/group-overview model=model}}

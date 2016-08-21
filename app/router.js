@@ -86,25 +86,28 @@ Router.map(function() {
         // this.route('other');
         // this.route('individual');
         this.route('show', {
-            path: '/:group_id/show'
+            path: '/:group_id/overview'
         });
         this.route('edit', {
             path: '/:group_id/edit'
         });
         this.route('students', {
-            path: '/:batch_id/students'
+            path: '/:group_id/students'
         });
         this.route('assignments', {
-            path: '/:batch_id/assignments'
+            path: '/:group_id/assignments'
         });
         this.route('marks', {
-            path: '/:batch_id/marks'
+            path: '/:group_id/marks'
         });
         this.route('exams', {
-            path: '/:batch_id/exams'
+            path: '/:group_id/exams'
+        });
+        this.route('handouts', {
+            path: '/:group_id/handouts'
         });
         this.route('fees', {
-            path: '/:batch_id/fees'
+            path: '/:group_id/fees'
         });
         //  this.route('delete', { path: '/:student_id/delete'});
         //  Add Actions Later
